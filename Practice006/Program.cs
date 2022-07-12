@@ -2,10 +2,16 @@
 Напишите программу, которая выводит трехзначное целое число и удаляет вторую цифру этого числа
 */
 
-int a = new Random().Next(100, 1000);
+int a = new Random().Next (100, 1000);
+Console.WriteLine (a);
 
-int digitFirst = a / 100;
-int digitThird = a % 10;
+int result = deleteSecondNumber (a);
+Console.WriteLine (result);
 
-Console.WriteLine("случайное число: " + a);
-Console.WriteLine(digitFirst*10 + digitThird);
+int deleteSecondNumber (int number)
+{
+    int digitOne = number / 100;
+    int digitThird = number % 10;
+    int resultDouble = digitOne * 10 + digitThird;
+    return resultDouble;
+}
